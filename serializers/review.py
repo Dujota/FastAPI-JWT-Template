@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import Optional
 
-class CommentSchema(BaseModel):
+class ReviewSchema(BaseModel):
   id: Optional[int] = Field(default=None)
   content: str
 
