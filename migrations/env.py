@@ -24,6 +24,8 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 from models.base import Base
 from models.user import UserModel
+from models.property import PropertyModel
+
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
