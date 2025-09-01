@@ -15,13 +15,13 @@ Once this base project is setup, please review and follow the post install docum
 Clone this repo down to your machine so you can start the setup stage for your new project: 
 
 ```bash
-git clone https://github.com/Dujota/fast-api-jwt-auth-template-example.git
+git clone https://github.com/Dujota/FastAPI-JWT-Template.git
 ```
 
-Once we have the repository on our machines, we can change the name of the directory to `'express-api-hoot-back-end'`:
+Once we have the repository on our machines, we can change the name of the directory to your new project name`:
 
 ```bash
-mv fast-api-jwt-auth-template-example <YOUR_APP_NAME>
+mv FastAPI-JWT-Template <YOUR_APP_NAME>
 ```
 
 Next, `cd` into your renamed directory:
