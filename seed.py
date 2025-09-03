@@ -1,8 +1,9 @@
 # seed.py
 
 from sqlalchemy.orm import sessionmaker, Session
-from data.tea_data import teas_list, comments_list
 from data.user_data import user_list
+from data.property_data import property_list
+
 from config.environment import db_URI
 from sqlalchemy import create_engine
 from models.base import Base
@@ -25,16 +26,9 @@ try:
     db.add_all(user_list)
     db.commit()
 
-    # Seed teas
-    db.add_all(teas_list)
+    db.add_all(property_list)
     db.commit()
-
-    # Seed comments
-    db.add_all(comments_list)
-    db.commit()
-
-
-
+    
     db.close()
 
     print("Database seeding complete! 👋")
