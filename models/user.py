@@ -17,7 +17,6 @@ class UserModel(BaseModel):
     username = Column(String, unique=True)  # Each username must be unique
     email = Column(String, unique=True)  # Each email must be unique
     password_hash = Column(String, nullable=True)
-    teas = relationship('TeaModel', back_populates='user')
 
     # Auth Methods
 
