@@ -5,6 +5,8 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta, timezone
 import jwt
 
+from models.property import PropertyModel
+
 from config.environment import jwt_secret
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -17,7 +19,7 @@ class UserModel(BaseModel):
     username = Column(String, unique=True)  # Each username must be unique
     email = Column(String, unique=True)  # Each email must be unique
     password_hash = Column(String, nullable=True)
-    teas = relationship('TeaModel', back_populates='user')
+    properties = relationship('PropertyModel', back_populates='user')
 
     # Auth Methods
 
